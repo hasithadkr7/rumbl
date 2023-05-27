@@ -8,8 +8,8 @@ defmodule Rumbl.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      # Rumbl.Repo,
+#       Start the Ecto repository
+       Rumbl.Repo,
       # Start the Telemetry supervisor
       RumblWeb.Telemetry,
       # Start the PubSub system
