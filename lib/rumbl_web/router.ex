@@ -19,8 +19,7 @@ defmodule RumblWeb.Router do
 
     get "/", PageController, :index
 
-    get "/users",     UserController, :index
-    get "/users/:id", UserController, :show
+    resources "/users", UserController, only: [:index, :show, :new, :create]
 
   end
 
