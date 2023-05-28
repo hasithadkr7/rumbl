@@ -96,13 +96,15 @@ defmodule RumblWeb do
   defp view_helpers do
     quote do
       import Phoenix.Controller, only: [get_csrf_token: 0,
-                                        get_flash: 2,
+#                                        get_flash: 2,
                                         view_module: 1]
+      import Phoenix.Flash, only: [get: 2]
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
       # Import LiveView and .heex helpers (live_render, live_patch, <.form>, etc)
       import Phoenix.LiveView.Helpers
+      import Phoenix.Component
 
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
